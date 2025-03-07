@@ -18,6 +18,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(updatable = false)
     private Integer id;
     @NotBlank
     private String name;
@@ -49,9 +50,6 @@ public class Employee {
         this.name = name;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public Integer getAge() {
         return age;
